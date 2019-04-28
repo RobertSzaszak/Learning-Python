@@ -1,0 +1,17 @@
+def isPalindrom(s):
+    #Returns True if is a palindrome and False otherwise
+    if len(s) <= 1: return True
+    #If it is one or less character its a palindrom
+    else: return s[0] == s[-1] and isPalindrom(s[1:-1])
+    #Check if the first and the last characters are the same
+    
+def isPalindrom1(s, indent):
+    print (indent, 'isPalindrom called with ', s)
+    if len(s) <= 1:
+        print (indent, 'About to return True from base case')
+        return True
+    else:
+        ans = s[0] == s[-1] and isPalindrom1(s[1:-1], indent + indent)
+        print (indent, 'About to return', ans)
+        return ans
+    
