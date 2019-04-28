@@ -1,0 +1,49 @@
+def bubbleSort(L):
+    for j in range(len(L)):
+        for i in range(len(L) - 1):
+            if L[i] > L[i+1]:
+                temp = L[i]
+                L[i] = L[i+1]
+                L[i+1] = temp
+        print (L)
+        
+ def testBubbleSort():
+    test1 = [1,6,3,4,5,2]
+    input('run bubble test 1')
+    bubbleSort(test1)
+    test2 = [2,5,1,3,4,6]
+    input('run bubble test 2')
+    bubbleSort(test2)
+    test3 = [6,3,2,5,4,1]
+    input('run bubble test 3')
+    bubbleSort(test3)
+    test4 = [5,1,2,3,4,6]
+    input('run bubble test 4')
+    bubbleSort(test4)
+    
+    
+def bubbleSortFixed(L):
+    swapped = True
+    while swapped:
+        swapped = False
+        for i in range(len(L) - 1):
+            if L[i] > L[i+1]:
+                temp = L[i]
+                L[i] = L[i+1]
+                L[i+1] = temp
+                swapped = True
+        print(L)
+        
+   def testBubbleSortFixed():
+    test1 = [1,6,3,4,5,2]
+    input('run bubble test 1')
+    bubbleSortFixed(test1)
+    test2 = [2,5,1,3,4,6]
+    input('run bubble test 2')
+    bubbleSortFixed(test2)
+    test3 = [6,3,2,5,4,1]
+    input('run bubble test 3')
+    bubbleSortFixed(test3)
+    test4 = [5,1,2,3,4,6]
+    input('run bubble test 4')
+    bubbleSortFixed(test4)
