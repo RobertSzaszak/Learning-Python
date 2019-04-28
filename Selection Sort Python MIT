@@ -1,0 +1,39 @@
+def selSort(L):
+    for i in range(len(L) - 1):
+        #Do it i times a until the last element of a list
+        minIndx = i
+        #Start it at the first element
+        minVal = L[i]
+        #Set minVal to be equal to where the i in the foor loop is
+        j = i + 1
+        #Make j new variable and make it equal to i + 1 
+        while j < len(L):
+            #Do this while j is less then the lenght of the list
+            if minVal > L[j]:
+                #Do this if minVal is less than where the counter j is
+                minIndx = j
+                #Set minIndx to be equal to where the counter j is
+                minVal = L[j]
+                #Set minVal to be equal to the element at which j is
+            j = j + 1
+            #Add one to j
+        temp = L[i]
+        #Move the current element to a temporary variable
+        L[i] = L[minIndx]
+        #Change minIndx to be equal to where the i counter is
+        L[minIndx] = temp
+        print (L)
+        
+   def testSelSort():
+    test1 = [1, 6, 3, 4, 5, 2]
+    input('run selection test 1')
+    selSort(test1)
+    test2 = [6, 1, 2, 3, 4, 5]
+    input('run selection test 2')
+    selSort(test2)
+    test3 = [6, 5, 4, 3, 2, 1]
+    input('run selection test 3')
+    selSort(test3)
+    test4 = [59, 45, 1, 76, 45345, 18]
+    input('run selection test 4')
+    selSort(test4)
