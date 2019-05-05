@@ -1,0 +1,28 @@
+def create(smallest, largest):
+    intSet = []
+    for i in range(smallest, largest+1): intSet.append(None)
+    return intSet
+    
+def insert(intSet, e):
+    intSet[e] = 1
+    
+def member(IntSet, e):
+    return intSet[e] == 1
+    
+def hashChar(c):
+    # c is a char
+    # function returns a different integer in the range 0-255
+    # for each possible value of c
+    return ord(c)
+    # ord - Returns a character as an integer (built in function)
+    
+def cSetCreate():
+    cSet = []
+    for i in range(0, 255): cSet.append[None]
+    return cSet
+    
+def cSetInsert(cSet, e):
+    cSet[hashChar(e)] == 1
+    
+def cSetMember(cSet, e):
+    return cSet[hashChar(e)] == 1
