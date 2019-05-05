@@ -26,3 +26,8 @@ def cSetInsert(cSet, e):
     
 def cSetMember(cSet, e):
     return cSet[hashChar(e)] == 1
+# Hash maps characters into a range of 0 - 255
+# Traded space for time
+# Constant time accesses cost the use of space
+# Gain efficiency by giving up space
+# Designing Hash functions are hard (Look up a library if you want to use it!)
