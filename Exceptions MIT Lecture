@@ -1,0 +1,67 @@
+def readFloat(requestMsg, errorMsg):
+    while True:
+        value = input(requestMsg)
+        try:
+            val = float(val)
+            return value
+        except:
+            print(errorMsg)
+
+print (readFloat('Enter float: ', 'Not a float.'))
+
+#-----------------------------------------------
+
+def readVal(valType, requestMsg, errorMsg):
+    while True:
+        val = input(requestMsg)
+        try:
+            val = valType(val)
+            return val
+        except:
+            print(errorMsg)
+            
+print (readVal(int, 'Enter int: ', 'Not an int.'))
+
+#--------------------------------------------------
+
+def getGrades(fname):
+    try:
+        gradesFile = open(fname, 'r')
+    except IOError:
+        print('Could not open', fname)
+        raise('GetGradesError')
+    grades = []
+    for line in gradesFile: grades.append(float(line))
+    return grades
+
+try:
+    grades = getGrades('glgrades.txt')
+    grades.sort()
+    median = grades[len(grades)/2]
+    print('Median grade is ', median)
+except 'GetGradesError':
+    print ('Whoops')
+    
+
+# Try - Except Block
+# When you hit a try block 
+# its trying to excecute the instructions
+# If it cannot successfully excecute the instructions 
+# it skips past the except block
+
+# Difference between an Exception and an Assert
+#
+# Assert
+#
+# If certaion conditions are True the rest of the code runs
+# If not, it throws and error!
+# Pre-condition - Post-condition
+# Useful for debugging
+#
+# Exceptions can handle conditions other than the normal ones
+
+# Recap: Standard algorithms
+#     - Brute force - walk through every possible case (for small problems)
+#     - Guess and Check and refine the search
+#     - Successive approximation 
+#     - Divide and Counqer
