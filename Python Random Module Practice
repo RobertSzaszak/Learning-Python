@@ -1,0 +1,53 @@
+import random
+
+#Create random value between 0 - 1 (0 is incluseive 1 is not)
+
+value = random.random()
+print(value)
+
+#Create a random floating point value betwen 1 and 10
+
+value = random.uniform(1, 10) #Change arguments for differetn range
+print(value)
+
+#Create a random integer value betwen 1 and 10
+
+value = random.randint(1, 10) #Creates only integers
+print(value)
+
+#Coin flip
+
+value = random.randint(1, 10)
+print(value)
+
+#Choice method takes a random value from a list
+
+greetings = ['Hello', 'Hi', 'Howdy', 'Szia']
+
+value = random.choice(greetings) 
+print(value + ', Rob!')
+
+#Pick a random value from a list 10 times
+
+colors = ['Red', 'Black', 'Green']
+results = random.choices(colors, k=10)  #k= How many times you want to pick a value
+print(results)
+
+#Pick a random value from a list but weighted (Roulette Wheel)
+
+colors = ['Red', 'Black', 'Green']
+results = random.choices(colors, weights=[18, 18, 2], k=10)
+print(results)
+
+#Create a list of values and shuffle it
+
+deck = list(range(1, 53))
+random.shuffle(deck)
+print(deck)
+
+#Get unique values from a list
+
+deck = list(range(1, 53))
+hand = random.sample(deck, k=5)
+print(hand)
+
